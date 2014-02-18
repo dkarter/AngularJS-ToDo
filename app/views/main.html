@@ -1,0 +1,54 @@
+<div class="header">
+  <ul class="nav nav-pills pull-right">
+    <li class="active"><a ng-href="#">Home</a></li>
+    <li><a ng-href="#">About</a></li>
+    <li><a ng-href="#">Contact</a></li>
+  </ul>
+  <h3 class="text-muted">My experiments with Yeoman workflow</h3>
+</div>
+
+<div class="jumbotron">
+  <h1>First Angular ToDo</h1>
+  <p class="lead">
+    This is my first app build with Yeoman and AngularJS.
+  </p>
+  <p><a class="btn btn-lg btn-success" ng-click="showToDoApp()">Check it out!</a></p>
+  
+  
+</div>
+
+<div ng-hide="showApp">
+  <div ng-repeat="todo in todos" class="form-inline">
+    <div class="row vert-row">
+      <div class="col-md-4">
+        <input type="text" class="form-control" ng-model="todo" />
+      </div>
+      <button ng-click="removeTodo($index)" class="btn btn-danger">x</button>
+    </div>
+  </div>
+  <form ng-submit="addTodo()" role="form" class="form-inline">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Add ToDo Item..." ng-model="todo" />
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button>
+  </form>
+</div>
+
+<!-- <div class="row marketing">
+  <h4>HTML5 Boilerplate</h4>
+  <p>
+    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
+  </p>
+
+  <h4>Angular</h4>
+  <p>
+    AngularJS is a toolset for building the framework most suited to your application development.
+  </p>
+
+  <h4>Karma</h4>
+  <p>Spectacular Test Runner for JavaScript.</p>
+</div>
+ -->
+<div class="footer">
+  <p>♥ from the Yeoman team</p>
+</div>
