@@ -12,11 +12,7 @@ angular.module('mytodoApp')
     };
 
     $scope.showToDoApp = function(){
-      if (!$scope.showApp) {
-        $scope.showApp = true;
-      } else {
-        $scope.showApp = false;
-      }
+      $scope.showApp = !$scope.showApp;
     };
 
     $scope.removeTodo = function(index) {
